@@ -4,14 +4,14 @@ metadata:
   labels:
     some-label: jenkins-pipeline
 spec:
-  serviceAccountName: jenkins-agent # Enter the service account name being used
+  serviceAccountName: jenkins # Enter the service account name being used
   securityContext:
     runAsUser: 0
     fsGroup: 0
     runAsNonRoot: false
   containers:
   - name: jenkins-agent
-    image: <AWS-ACCOUNT-ID>.dkr.ecr.<AWS-REGION>.amazonaws.com/test-jenkins-agent:latest # Enter the jenkins inbound agent image.
+    image: 809230484145.dkr.ecr.ap-south-1.amazonaws.com/jenkins:Za81tvu # Enter the jenkins inbound agent image.
     command:
     - cat
     tty: true
